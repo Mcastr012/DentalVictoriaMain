@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Victoria Dental Clinic - La sonrisa perfecta comienza aqui</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #30047e;
+            --text-color: #333;
+            --light-bg: #f4f4f4;
+        }
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+            font-weight: 700;
+        }
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header .logo {
+            float: left;
+            font-size: 1.5em;
+            font-weight: bold;
+            font-family: 'Lora', serif;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header nav ul {
+            padding: 0;
+        }
+        header nav li {
+            display: inline;
+            padding: 0 20px;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        header .highlight, header .current a {
+            color: #e8f5e9;
+            font-weight: 600;
+        }
+        header a:hover {
+            color: #e8f5e9;
+            transition: 0.3s;
+        }
+        #showcase {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/600') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+        }
+        #showcase h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        #showcase p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+        #services, #about, #testimonials, #contact {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .service-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.3s;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+        .service-item i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        .service-item h3 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        #about {
+            background: var(--light-bg);
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .about-text {
+            flex: 1;
+            padding-right: 30px;
+        }
+        .about-image {
+            flex: 1;
+        }  
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        #testimonials {
+            background: var(--primary-color);
+            color: #fff;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-item {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 5px;
+            font-style: italic;
+        }
+        .testimonial-item h4 {
+            font-style: normal;
+            margin-top: 20px;
+            text-align: right;
+        }
+        #contact form {
+            display: grid;
+            gap: 20px;
+        }
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        footer {
+            background: var(--secondary-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Dental Victoria</div>
+            <nav>
+                <ul>
+                    <li><a href="#showcase">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>The Perfect Smile Begins Here</h1>
+            <p>Experience top-quality dental care in a comfortable and friendly environment.</p>
+            <a href="#contact" class="btn">Book Appointment</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-tooth"></i>
+                    <h3>General Dentistry</h3>
+                    <p>Comprehensive care for all your dental needs, including cleanings, fillings, and preventive treatments.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-smile"></i>
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>Enhance your smile with our advanced treatments, including teeth whitening, braces, and bonding.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-teeth"></i>
+                    <h3>Orthodontics</h3>
+                    <p>Achieve the perfect alignment for your teeth with our range of orthodontic treatments, including braces and Invisalign.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Oral Surgery</h3>
+                    <p>Expert care for more complex dental issues, including wisdom teeth removal and dental implants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Dental Victoria</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Dental Victoria, we're committed to providing exceptional dental care in a warm, welcoming environment. Our team of experienced professionals uses the latest technology and techniques to ensure you receive the best possible treatment.</p>
+                    <p>We believe in a patient-centered approach, taking the time to understand your unique needs and concerns. Whether you're visiting us for a routine check-up or a more complex procedure, we're dedicated to making your experience as comfortable and stress-free as possible.</p>
+                </div>
+                <div class="about-image">
+                    <img src="IMG_5714.jpg" alt="Dental Victoria Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-item">
+                    <p>"Dr. Claudia always clearly explains every question I have had. She has provided me with her services for more than 10 years. Without a doubt, I totally recommend her. Punctuality and excellent treatment, especially with seriousness to the patient."</p>
+                    <h4>- Martha Urquidez</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Very good and very professional."</p>
+                    <h4>- Giovanna Lopez</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Excellent clinic for dental treatments. I was very satisfied with the result of my orthodontics. Dr. Castro has a lot of experience and I highly recommend treating her."</p>
+                    <h4>- Jose Madge</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Your Phone">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Dental Victoria Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
